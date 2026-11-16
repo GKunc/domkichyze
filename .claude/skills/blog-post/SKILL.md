@@ -15,7 +15,7 @@ description: Create or update a static blog post for this landing (outline, draf
    - Shared values (BRAND, LANG, LOCALE, THEME_COLOR, SITE_URL, CTA_LABEL) as on the home page.
 4. Write POST_BODY in the brand voice: first paragraph answers the question directly; then specifics, examples, steps, a short summary. h2/h3 only (the title is the h1). No invented stats; cite sources. Link to the landing CTA and 1-3 related posts. Images: `alt`, width, height, `loading="lazy"`.
 5. Wire it up (`tools/check.mjs` fails if any is missing):
-   - `src/blog/index.html`: `<li>` at the top of `#post-list` with link, `<time>` and a one-sentence summary.
+   - `src/blog/index.html`: `<li>` at the top of `#post-list` with link, `<time>` and a one-sentence summary. On the first post: remove its `noindex` meta, add `blog/` to `sitemap.xml` and `llms.txt`, and in `lighthouserc.json` drop the `blog/index` exemption (second `assertMatrix` entry and the `|blog/index` in the first pattern) so its SEO score is checked again.
    - `src/blog/feed.xml`: `<item>` at the top (title, link, guid, RFC 822 pubDate, description).
    - `src/sitemap.xml`: `<url><loc>SITE_URL/blog/<slug>.html</loc></url>` (lastmod is added at deploy).
    - `src/llms.txt`: `- [Title](URL): one-line summary` under `## Blog`.
