@@ -1,0 +1,14 @@
+{
+  "name": "Domki Chyże 3",
+  "short_name": "Chyże 3",
+  "start_url": "./",
+  "scope": "./",
+  "display": "browser",
+  "background_color": "#FAFAF8",
+  "theme_color": "#6B7A67",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

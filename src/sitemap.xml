@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <lastmod> is added automatically at deploy from each file's last git commit (tools/build.mjs). -->
+<!-- blog/ dochodzi tutaj razem z pierwszym wpisem (skill blog-post). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.domkichyze.pl/</loc></url>
+  <url><loc>https://www.domkichyze.pl/privacy.html</loc></url>
+</urlset>
