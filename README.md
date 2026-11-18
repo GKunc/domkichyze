@@ -25,6 +25,7 @@ Claude creates the page repo from this template, switches on hosting, fills the 
 | `tools/indexnow.mjs` | Notifies Bing/IndexNow of changed URLs after each deploy |
 | `.github/workflows/pages.yml` | On PRs: checks. On `main`: checks → HTML validation → link check → Lighthouse → deploy → smoke test → IndexNow |
 | `.github/dependabot.yml` | Keeps the workflow's actions up to date |
+| `tools/lighthouse.mjs` | Lighthouse in CI: only pages changed since the last successful deploy; a shared file (CSS, JS, fonts) or more than 5 changed pages → 5 random pages; `--all` every page, `--list` just prints them |
 | `lighthouserc.json` | Lighthouse budgets: performance ≥ 0.9; accessibility, best practices, SEO ≥ 0.95; CLS ≤ 0.1 |
 | `.claude/skills/` | new-landing, publish, domain-knowledge, seo, blog-post, audit, webmcp |
 | `.claude/launch.json` | Local preview server (`python3 -m http.server 4321 --directory src`) |
